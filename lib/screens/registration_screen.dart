@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:registration_form/screens/details_screen.dart';
 
 
 class RegistrationScreen extends 
@@ -72,7 +73,26 @@ style:const TextStyle(
 ),
 ),
       ),
+    ),
+    const SizedBox(height: 30,),
+    if(isRegistered)
+    ElevatedButton(onPressed: (){
+Navigator .push(context, 
+MaterialPageRoute(builder: (context) => DetailsScreen(
+  firstname: firstNameController.text,
+  lastname: lastNameController.text,
+  email: emailController.text,
+
+)));
+
+
+    }, 
+    
+    child: const Text("View registration details")
+
     )
+
+    
     ],
 
   )
